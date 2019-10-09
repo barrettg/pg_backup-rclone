@@ -17,12 +17,12 @@ while [ $# -gt 0 ]; do
         esac
 done
  
-if [ ! -r ${CONFIG_FILE_PATH} ] ; then
+if [ ! -r ${CONFIG_FILE_PATH}/pg_backup.config ] ; then
         echo "Could not load config file from ${CONFIG_FILE_PATH}" 1>&2
         exit 1
 fi
  
-source "${CONFIG_FILE_PATH}"
+source "${CONFIG_FILE_PATH}/pg_backup.config"
  
 ###########################
 #### PRE-BACKUP CHECKS ####
