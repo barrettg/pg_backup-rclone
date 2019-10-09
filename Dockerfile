@@ -30,4 +30,4 @@ VOLUME /config
 
 #ENTRYPOINT ["top", "-b"]
 ENTRYPOINT ["/scripts/docker-entrypoint.sh"]
-CMD ["/scripts/docker-cmd.sh"]
+CMD ["/scripts/wait-for-postgres.sh", "/scripts/docker-cmd.sh"]
