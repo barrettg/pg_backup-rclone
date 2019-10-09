@@ -6,6 +6,7 @@ then
   export PGPASSWORD="`cat ${POSTGRES_PASSWORD_FILE}`"
 else
   export PGPASSWORD="${POSTGRES_PASSWORD}"
+  echo "Postgres Password: " ${PGPASSWORD}
 fi
 
 exec "$@"
