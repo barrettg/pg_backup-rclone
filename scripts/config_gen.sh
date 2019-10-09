@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cat >/root/pg_backup.config << EOF
+cat > /${CONFIG_FILE_PATH}/pg_backup.config << EOF
 ##############################
 ## POSTGRESQL BACKUP CONFIG ##
 ##############################
@@ -46,6 +46,14 @@ DAYS_TO_KEEP=${DAYS_TO_KEEP-7}
 WEEKS_TO_KEEP=${WEEKS_TO_KEEP-5}
  
 ######################################
+
+##############################
+## RCLONE CONFIG            ##
+##############################
+RCLONE_CONFIG_PATH=${RCLONE_CONFIG_PATH}
+RCLONE_CONFIG_FILENAME=${RCLONE_CONFIG_FILENAME}
+RCLONE_REMOTE_NAME=${RCLONE_REMOTE_NAME}
+RCLONE_REMOTE_PATH=${RCLONE_REMOTE_PATH}
 
 EOF
 

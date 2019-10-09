@@ -1,8 +1,10 @@
 #!/bin/sh
 set -e
 
-/crontab_gen.sh
+echo "Generating Cron Tab"
+/scripts/crontab_gen.sh
 
-/config_gen.sh
+echo "Generating Config"
+/scripts/config_gen.sh
 
 exec "$@"
