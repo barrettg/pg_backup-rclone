@@ -17,11 +17,6 @@ while [ $# -gt 0 ]; do
         esac
 done
  
-if [ -z $CONFIG_FILE_PATH ] ; then
-        SCRIPTPATH=$(cd ${0%/*} && pwd -P)
-        CONFIG_FILE_PATH="${SCRIPTPATH}/pg_backup.config"
-fi
- 
 if [ ! -r ${CONFIG_FILE_PATH} ] ; then
         echo "Could not load config file from ${CONFIG_FILE_PATH}" 1>&2
         exit 1
@@ -45,6 +40,7 @@ fi
 ###########################
  
 if [ ! $HOSTNAME ]; then
+	echo "!Defaulting Postgres to localhost!"
     HOSTNAME="localhost"
 fi;
  
