@@ -48,6 +48,11 @@ if [ ! $USERNAME ]; then
     USERNAME="postgres"
 fi;
  
+if [ ! $PGPASSWORD ]; then
+    export PGPASSWORD=${POSTGRES_PASSWORD}
+fi;
+ 
+ echo "Backup started with PGPASSWORD:" ${PGPASSWORD}
  
 ###########################
 #### START THE BACKUPS ####
