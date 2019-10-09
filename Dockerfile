@@ -14,7 +14,7 @@ RUN sh -c 'curl -sL https://rclone.org/install.sh | bash -'
 
 ENV POSTGRES_HOSTNAME localhost
 ENV POSTGRES_USER postgres
-ENV POSTGRES_PASS postgres
+ENV POSTGRES_PASSWORD postgres
 ENV WEEKS_TO_KEEP 4
 ENV DAYS_TO_KEEP 7
 ENV DAY_OF_WEEK_TO_KEEP 6

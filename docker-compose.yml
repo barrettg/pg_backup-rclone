@@ -6,7 +6,7 @@ pg_backup:
   environment:
     - POSTGRES_HOSTNAME=localhost
     - POSTGRES_USER=postgres
-    - POSTGRES_PASS=K93SD8yEDaVXRpkvFtCj
+    - POSTGRES_PASSWORD=K93SD8yEDaVXRpkvFtCj
     - WEEKS_TO_KEEP=4
     - DAYS_TO_KEEP=7
     - DAY_OF_WEEK_TO_KEEP=6
