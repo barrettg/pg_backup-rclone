@@ -28,6 +28,6 @@ ENV RCLONE_REMOTE_PATH /
 VOLUME /backups
 VOLUME /config
 
-#ENTRYPOINT ["top", "-b"]
-ENTRYPOINT ["/scripts/docker-entrypoint.sh"]
-CMD ["/scripts/docker-cmd.sh"]
+ENTRYPOINT ["top", "-b"]
+#ENTRYPOINT ["/scripts/docker-entrypoint.sh"]
+#CMD ["/scripts/docker-cmd.sh"]
