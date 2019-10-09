@@ -6,7 +6,7 @@ set -e
 
 cmd="$@"
 
-until psql -h "$HOSTNAME" -U "$USERNAME" -c '\l'; do
+until psql -h "$POSTGRES_HOSTNAME" -U "$POSTGRES_USER" -c '\l'; do
   >&2 echo "Postgres is unavailable - sleeping"
   sleep 1
 done
